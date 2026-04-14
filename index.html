@@ -9,7 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -30,58 +30,98 @@
         }
     </script>
 </head>
-<body class="bg-relief-blue text-relief-dark min-h-screen flex flex-col items-center font-sans">
+<body class="bg-relief-blue text-relief-dark min-h-screen flex flex-col font-sans">
 
-    <header class="w-full max-w-4xl mx-auto pt-8 px-4 flex justify-center">
-        <img src="image.png" alt="Nao" class="max-h-48 w-auto object-contain mix-blend-multiply">
+    <!-- En-tête avec le logo (plus compact pour sauver de l'espace vertical) -->
+    <header class="w-full max-w-7xl mx-auto pt-6 px-6 lg:px-8 flex justify-center lg:justify-start">
+        <!-- Assure-toi que l'image du logo (image.png) est dans le dossier -->
+        <img src="image.png" alt="Nao Logo" class="h-16 md:h-20 w-auto object-contain mix-blend-multiply">
     </header>
 
-    <main class="flex-grow flex flex-col items-center w-full px-4 py-8">
+    <!-- Section Principale (Hero Section) : Layout Côte à Côte -->
+    <main class="flex-grow w-full max-w-7xl mx-auto px-6 lg:px-8 py-8 md:py-12 flex flex-col">
         
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <p>
-                Votre premier point de contact bienveillant. Nao est un agent conversationnel conçu pour vous orienter rapidement vers les ressources les plus adaptées à vos besoins.
-            </p>
-        </div>
-        <div class="bg-white/50 p-6 rounded-2xl border border-white/20 shadow-sm mb-8">
-            <h3 class="font-bold mb-3 uppercase text-xs tracking-wider text-blue-700">Guide de test</h3>
-                <ul class="space-y-2 text-sm">
-                    <li class="flex items-center">✨ Dites : <code class="bg-blue-100 px-2 py-1 rounded mx-1">"Je me sens anxieux"</code></li>
-                    <li class="flex items-center">✨ Demandez : <code class="bg-blue-100 px-2 py-1 rounded mx-1">"Quels sont vos ateliers ?"</code></li>
-                </ul>
-        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            
+            <!-- Colonne de Gauche : Contexte, Guide et Illustration -->
+            <div class="flex flex-col space-y-8 order-2 lg:order-1">
+                
+                <!-- Texte d'introduction -->
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 text-relief-dark">
+                        Découvrez Nao
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-800 font-medium leading-relaxed">
+                        Votre premier point de contact bienveillant. Nao est un agent conversationnel conçu pour vous orienter rapidement vers les ressources les plus adaptées à vos besoins.
+                    </p>
+                </div>
 
-        <div class="w-full max-w-[640px] h-[480px] bg-white rounded-xl shadow-2xl overflow-hidden border border-white/50">
-            <iframe width="640" height="480" src="https://embed.wotnot.io/D994Bw3bhHX2122934736309CgLHEsYD/bot/5DKH43iiwmSV130537165670ESskA7Az?display_header=false&history_retention=false" frameborder="0"></iframe>
-        </div>
-        <div class="max-w-7xl mx-auto px-6">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="p-6">
-                        <div class="text-3xl mb-4">🕒</div>
-                        <h4 class="font-bold text-lg mb-2">Accessibilité 24/7</h4>
-                        <p class="text-gray-600 text-sm">Une oreille attentive à toute heure, même quand nos bureaux sont fermés.</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-3xl mb-4">🛡️</div>
-                        <h4 class="font-bold text-lg mb-2">Sécurité & Anonymat</h4>
-                        <p class="text-gray-600 text-sm">Échanges confidentiels et sécurisés pour explorer vos besoins sans jugement.</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-3xl mb-4">🧭</div>
-                        <h4 class="font-bold text-lg mb-2">Autonomie</h4>
-                        <p class="text-gray-600 text-sm">Trouvez vos propres repères à votre rythme. Une démarche qui s'inscrit au cœur de l'autogestion.</p>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-3xl mb-4">🗺️</div>
-                        <h4 class="font-bold text-lg mb-2">Orientation Rapide</h4>
-                        <p class="text-gray-600 text-sm">Triage intelligent vers les ateliers, l'accompagnement ou les outils d'autogestion.</p>
-                    </div>
+                <!-- Guide de test -->
+                <div class="bg-white/60 p-6 rounded-2xl border border-white/40 shadow-sm backdrop-blur-sm">
+                    <h3 class="font-bold mb-3 uppercase text-xs tracking-wider text-blue-700">Guide de test</h3>
+                    <ul class="space-y-3 text-sm font-medium">
+                        <li class="flex items-center">
+                            <span class="mr-2 text-lg">✨</span> Dites : <code class="bg-blue-100/80 px-2 py-1 rounded mx-2 text-blue-900">"Je me sens anxieux"</code>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2 text-lg">✨</span> Demandez : <code class="bg-blue-100/80 px-2 py-1 rounded mx-2 text-blue-900">"Quels sont vos ateliers ?"</code>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Espace réservé pour l'illustration de Relief -->
+                <!-- Remplacer 'illustration.png' par le nom de votre future image -->
+                <div class="hidden md:flex justify-center lg:justify-start pt-4">
+                    <img src="personnage.png" alt="Illustration personnage" class="max-h-56 w-auto object-contain mix-blend-multiply opacity-90">
+                </div>
+
+            </div>
+
+            <!-- Colonne de Droite : Chatbot Iframe (Priorité visuelle) -->
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div class="w-full max-w-[500px] h-[550px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-white/80 relative transition-transform hover:shadow-3xl">
+                    <!-- Iframe WotNot -->
+                    <iframe 
+                        width="100%" 
+                        height="100%" 
+                        src="https://embed.wotnot.io/D994Bw3bhHX2122934736309CgLHEsYD/bot/5DKH43iiwmSV130537165670ESskA7Az?display_header=false&history_retention=false" 
+                        frameborder="0"
+                        title="Chatbot Nao"
+                        class="absolute inset-0">
+                    </iframe>
                 </div>
             </div>
+
+        </div>
+
+        <!-- Section des 4 caractéristiques (En ligne sur grand écran) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center border-t border-blue-200/50 pt-12">
+            <div class="bg-white/40 p-6 rounded-2xl transition-colors hover:bg-white/60">
+                <div class="text-3xl mb-3">🕒</div>
+                <h4 class="font-bold text-base mb-2">Accessibilité 24/7</h4>
+                <p class="text-gray-700 text-sm">Une oreille attentive à toute heure, même quand nos bureaux sont fermés.</p>
+            </div>
+            <div class="bg-white/40 p-6 rounded-2xl transition-colors hover:bg-white/60">
+                <div class="text-3xl mb-3">🛡️</div>
+                <h4 class="font-bold text-base mb-2">Sécurité & Anonymat</h4>
+                <p class="text-gray-700 text-sm">Échanges confidentiels et sécurisés pour explorer vos besoins sans jugement.</p>
+            </div>
+            <div class="bg-white/40 p-6 rounded-2xl transition-colors hover:bg-white/60">
+                <div class="text-3xl mb-3">🧭</div>
+                <h4 class="font-bold text-base mb-2">Autonomie</h4>
+                <p class="text-gray-700 text-sm">Trouvez vos propres repères à votre rythme. Au cœur de l'autogestion.</p>
+            </div>
+            <div class="bg-white/40 p-6 rounded-2xl transition-colors hover:bg-white/60">
+                <div class="text-3xl mb-3">🗺️</div>
+                <h4 class="font-bold text-base mb-2">Orientation Rapide</h4>
+                <p class="text-gray-700 text-sm">Triage intelligent vers les ateliers ou les outils d'autogestion.</p>
+            </div>
+        </div>
         
     </main>
 
-    <footer class="w-full py-6 text-center text-sm text-gray-600">
+    <!-- Pied de page -->
+    <footer class="w-full py-6 mt-8 text-center text-sm text-gray-500">
         <p>&copy; 2026 Relief - Le chemin de la santé mentale.</p>
     </footer>
 
